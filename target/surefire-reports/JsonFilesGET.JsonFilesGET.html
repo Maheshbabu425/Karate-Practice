@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<meta charset="utf-8">
+    
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    
+<link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+<link href="res/karate-report.css" rel="stylesheet" type="text/css">
+    
+<link href="favicon.ico" rel="shortcut icon">
+    
+<script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    
+<title>JsonFilesGET.JsonFilesGET</title>
+  
+</head>
+  
+<body>
+    
+<div id="root-container">
+      
+<div id="leftnav">
+        
+<div class="nav-logo">
+          
+<a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          
+<div class="nav-count">
+            
+<div class="bg-success" id="nav-pass">1</div>
+            
+<div class="bg-danger" id="nav-fail">0</div>
+          
+</div>
+        
+</div>
+        
+<div id="nav-type">Scenarios</div>         
+        
+<div id="nav-date">2021-03-08 05:54:11 PM</div>        
+      
+<div class="nav-container">
+<div class="nav-item passed">
+<a href="#[1:5]">[1:5] User 2 details by GET method </a>
+</div>
+</div>
+</div>
+      
+<div id="content">
+      
+<div class="page-heading alert alert-primary">
+<a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">JsonFilesGET/JsonFilesGET.feature</span><span class="feature-description">Calling 2 json files</span>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[1:5]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [1:5]</span><span class="scenario-name">User 2 details by GET method </span>
+</div>
+<div class="scenario-time passed">ms: 2377</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="1">
+<div class="step-ref passed">1</div>
+<div class="step-cell passed">* def user2and3 = read('user2and3.json')</div>
+</div>
+<div class="time-cell passed">139</div>
+</div>
+<div class="preformatted" data-parent="1">17:54:08.907 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="step-row">
+<div class="step-container" id="2">
+<div class="step-ref passed">2</div>
+<div class="step-cell passed">Given url 'https://reqres.in/api/users/2'</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="3">
+<div class="step-ref passed">3</div>
+<div class="step-cell passed">When method GET</div>
+</div>
+<div class="time-cell passed">2192</div>
+</div>
+<div class="preformatted" data-parent="3">17:54:10.488 request:
+1 &gt; GET https://reqres.in/api/users/2
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: reqres.in
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_281)
+
+17:54:11.272 response time in milliseconds: 780.80
+1 &lt; 200
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Age: 121
+1 &lt; CF-Cache-Status: HIT
+1 &lt; CF-RAY: 62cd3d9e9c7a4fb1-JNB
+1 &lt; Cache-Control: max-age=14400
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Mon, 08 Mar 2021 15:54:11 GMT
+1 &lt; Etag: W/"118-pbdwwFo9SKNhD3Lx5iHJyngpq00"
+1 &lt; Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 &lt; NEL: {"max_age":604800,"report_to":"cf-nel"}
+1 &lt; Report-To: {"group":"cf-nel","endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=nItMD%2BBBnqM6WwvgfVBBt0vO4tSNzXn4%2BEBnzWU4xf%2BaYgtS9IIyw869kva7pCK%2Fb8WM3t77kPm6Z1UuIXDDVzlPcwwW5S91Upk%3D"}],"max_age":604800}
+1 &lt; Server: cloudflare
+1 &lt; Set-Cookie: __cfduid=dd908e090c490a73655b124b0d439704a1615218851; expires=Wed, 07-Apr-21 15:54:11 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Vary: Accept-Encoding
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Powered-By: Express
+1 &lt; cf-request-id: 08b424d71f00004fb10d979000000001
+{"data":{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}</div>
+<div class="step-row">
+<div class="step-container" id="4">
+<div class="step-ref passed">4</div>
+<div class="step-cell passed">Then status 200</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="5">
+<div class="step-ref passed">5</div>
+<div class="step-cell passed">And match response == user2and3[0]</div>
+</div>
+<div class="time-cell passed">43</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="6">
+<div class="step-ref passed">6</div>
+<div class="step-cell passed">Then print response</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="6">17:54:11.319 [print] {
+  "data": {
+    "last_name": "Weaver",
+    "id": 2,
+    "avatar": "https://reqres.in/img/faces/2-image.jpg",
+    "first_name": "Janet",
+    "email": "janet.weaver@reqres.in"
+  },
+  "support": {
+    "text": "To keep ReqRes free, contributions towards server costs are appreciated!",
+    "url": "https://reqres.in/#support-heading"
+  }
+}</div>
+</div>
+</div>
+    
+</div>   
+  
+</body>
+
+</html>

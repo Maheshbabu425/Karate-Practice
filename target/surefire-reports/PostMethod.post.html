@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<meta charset="utf-8">
+    
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    
+<link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+<link href="res/karate-report.css" rel="stylesheet" type="text/css">
+    
+<link href="favicon.ico" rel="shortcut icon">
+    
+<script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    
+<title>PostMethod.post</title>
+  
+</head>
+  
+<body>
+    
+<div id="root-container">
+      
+<div id="leftnav">
+        
+<div class="nav-logo">
+          
+<a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          
+<div class="nav-count">
+            
+<div class="bg-success" id="nav-pass">4</div>
+            
+<div class="bg-danger" id="nav-fail">0</div>
+          
+</div>
+        
+</div>
+        
+<div id="nav-type">Scenarios</div>         
+        
+<div id="nav-date">2021-03-08 08:32:25 PM</div>        
+      
+<div class="nav-container">
+<div class="nav-item passed">
+<a href="#[1:8]">[1:8] By using json payload, headers and params for post method </a>
+</div>
+<div class="nav-item passed">
+<a href="#[2:17]">[2:17] post method for register </a>
+</div>
+<div class="nav-item passed">
+<a href="#[3:24]">[3:24] post method for login </a>
+</div>
+<div class="nav-item passed">
+<a href="#[4:31]">[4:31] post method for login </a>
+</div>
+</div>
+</div>
+      
+<div id="content">
+      
+<div class="page-heading alert alert-primary">
+<a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">PostMethod/post.feature</span><span class="feature-description">Post method</span>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[1:8]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [1:8]</span><span class="scenario-name">By using json payload, headers and params for post method </span>
+</div>
+<div class="scenario-time passed">ms: 5556</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[1:8]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[1:8]bg">
+<div class="step-container" id="1">
+<div class="step-ref bg-step">1</div>
+<div class="step-cell passed">* def users = read('jsonPayload.json')</div>
+</div>
+<div class="time-cell passed">89</div>
+</div>
+<div class="preformatted" data-parent="1">20:32:16.389 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="step-row" data-parent="[1:8]bg">
+<div class="step-container" id="2">
+<div class="step-ref bg-step">2</div>
+<div class="step-cell passed">* url 'https://reqres.in/api'</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="3">
+<div class="step-ref passed">3</div>
+<div class="step-cell passed">Given path 'users'</div>
+</div>
+<div class="time-cell passed">5</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="4">
+<div class="step-ref passed">4</div>
+<div class="step-cell passed">And request users[0]</div>
+</div>
+<div class="time-cell passed">35</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="5">
+<div class="step-ref passed">5</div>
+<div class="step-cell passed">And header Content-Type = 'application/json'</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="6">
+<div class="step-ref passed">6</div>
+<div class="step-cell passed">And header Accept = 'application/json'</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="7">
+<div class="step-ref passed">7</div>
+<div class="step-cell passed">And param delay = 3</div>
+</div>
+<div class="time-cell passed">7</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="8">
+<div class="step-ref passed">8</div>
+<div class="step-cell passed">When method POST</div>
+</div>
+<div class="time-cell passed">5413</div>
+</div>
+<div class="preformatted" data-parent="8">20:32:17.593 request:
+1 &gt; POST https://reqres.in/api/users?delay=3
+1 &gt; Accept: application/json
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 34
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: reqres.in
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_281)
+{"name":"morpheus","job":"leader"}
+
+20:32:21.979 response time in milliseconds: 4382.87
+1 &lt; 201
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; CF-Cache-Status: DYNAMIC
+1 &lt; CF-RAY: 62ce253fefcf4f99-JNB
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 83
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Mon, 08 Mar 2021 18:32:22 GMT
+1 &lt; Etag: W/"53-41t7Km++qjtcjYrgg9UzD7c/850"
+1 &lt; Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 &lt; NEL: {"max_age":604800,"report_to":"cf-nel"}
+1 &lt; Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=Vr5%2BGxbXVdhve2H2zLy%2FRap0aL4eQgD2a0mGRrZskinyNYcyUhtjX%2BRbcYj4c1KyObuyv6jdbk4gb9nho%2BCp%2BecY9aTW40ikLfY%3D"}],"group":"cf-nel","max_age":604800}
+1 &lt; Server: cloudflare
+1 &lt; Set-Cookie: __cfduid=d788244134c502c1b3dfda7f13ea9f3361615228339; expires=Wed, 07-Apr-21 18:32:19 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Powered-By: Express
+1 &lt; cf-request-id: 08b4b59bf400004f9911019000000001
+{"name":"morpheus","job":"leader","id":"65","createdAt":"2021-03-08T18:32:22.466Z"}</div>
+<div class="step-row">
+<div class="step-container" id="9">
+<div class="step-ref passed">9</div>
+<div class="step-cell passed">Then status 201</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[2:17]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [2:17]</span><span class="scenario-name">post method for register </span>
+</div>
+<div class="scenario-time passed">ms: 703</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[2:17]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[2:17]bg">
+<div class="step-container" id="10">
+<div class="step-ref bg-step">10</div>
+<div class="step-cell passed">* def users = read('jsonPayload.json')</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="preformatted" data-parent="10">20:32:22.001 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="step-row" data-parent="[2:17]bg">
+<div class="step-container" id="11">
+<div class="step-ref bg-step">11</div>
+<div class="step-cell passed">* url 'https://reqres.in/api'</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="12">
+<div class="step-ref passed">12</div>
+<div class="step-cell passed">Given path 'register'</div>
+</div>
+<div class="time-cell passed">5</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="13">
+<div class="step-ref passed">13</div>
+<div class="step-cell passed">And request users[2]</div>
+</div>
+<div class="time-cell passed">7</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="14">
+<div class="step-ref passed">14</div>
+<div class="step-cell passed">When method POST</div>
+</div>
+<div class="time-cell passed">680</div>
+</div>
+<div class="preformatted" data-parent="14">20:32:22.025 request:
+1 &gt; POST https://reqres.in/api/register
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 50
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: reqres.in
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_281)
+{"email":"eve.holt@reqres.in","password":"pistol"}
+
+20:32:22.701 response time in milliseconds: 674.40
+1 &lt; 200
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; CF-Cache-Status: DYNAMIC
+1 &lt; CF-RAY: 62ce25573acb4f75-JNB
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 36
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Mon, 08 Mar 2021 18:32:23 GMT
+1 &lt; Etag: W/"24-4iP0za1geN2he+ohu8F0FhCjLks"
+1 &lt; Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 &lt; NEL: {"max_age":604800,"report_to":"cf-nel"}
+1 &lt; Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=KVBHcEnrVDdIioiHGCcWzwXYiBvOfiU8JmZFAL8fLJwi50a2kwPJbjzl5hFCUSXAZfsOS6Jz%2F8T%2FGCNYir7m4Tm2G9HsangdMBA%3D"}],"group":"cf-nel","max_age":604800}
+1 &lt; Server: cloudflare
+1 &lt; Set-Cookie: __cfduid=d2c5fc5e09d399a8b77cceaef31f8fc9c1615228342; expires=Wed, 07-Apr-21 18:32:22 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Powered-By: Express
+1 &lt; cf-request-id: 08b4b5aa8100004f756b135000000001
+{"id":4,"token":"QpwL5tke4Pnpja7X4"}</div>
+<div class="step-row">
+<div class="step-container" id="15">
+<div class="step-ref passed">15</div>
+<div class="step-cell passed">Then status 200</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="16">
+<div class="step-ref passed">16</div>
+<div class="step-cell passed">Then print  '--- Maheshbabu', response</div>
+</div>
+<div class="time-cell passed">7</div>
+</div>
+<div class="preformatted" data-parent="16">20:32:22.710 [print] --- Maheshbabu {
+  "id": 4,
+  "token": "QpwL5tke4Pnpja7X4"
+}</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[3:24]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [3:24]</span><span class="scenario-name">post method for login </span>
+</div>
+<div class="scenario-time passed">ms: 735</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[3:24]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[3:24]bg">
+<div class="step-container" id="17">
+<div class="step-ref bg-step">17</div>
+<div class="step-cell passed">* def users = read('jsonPayload.json')</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="preformatted" data-parent="17">20:32:22.720 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="step-row" data-parent="[3:24]bg">
+<div class="step-container" id="18">
+<div class="step-ref bg-step">18</div>
+<div class="step-cell passed">* url 'https://reqres.in/api'</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="19">
+<div class="step-ref passed">19</div>
+<div class="step-cell passed">Given path 'login'</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="20">
+<div class="step-ref passed">20</div>
+<div class="step-cell passed">And request users[1]</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="21">
+<div class="step-ref passed">21</div>
+<div class="step-cell passed">When method POST</div>
+</div>
+<div class="time-cell passed">724</div>
+</div>
+<div class="preformatted" data-parent="21">20:32:22.733 request:
+1 &gt; POST https://reqres.in/api/login
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 54
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: reqres.in
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_281)
+{"email":"eve.holt@reqres.in","password":"cityslicka"}
+
+20:32:23.387 response time in milliseconds: 651.84
+1 &lt; 200
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; CF-Cache-Status: DYNAMIC
+1 &lt; CF-RAY: 62ce255c1f9c4f8d-JNB
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 29
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Mon, 08 Mar 2021 18:32:24 GMT
+1 &lt; Etag: W/"1d-lGCrvD6B7Qzk11+2C98+nGhhuec"
+1 &lt; Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 &lt; NEL: {"max_age":604800,"report_to":"cf-nel"}
+1 &lt; Report-To: {"group":"cf-nel","endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=mUolkiJLJaMRgxfsPkeGtjHcfmdANLFi8c0IJMd630MSvihFn8fFK2%2Fb3XDnhnmzVcN%2F84giTae%2BBZvIs3NfDh9SAYHSqlJ64Lw%3D"}],"max_age":604800}
+1 &lt; Server: cloudflare
+1 &lt; Set-Cookie: __cfduid=d6e083de0a2373b80dc5794f56740e3c21615228343; expires=Wed, 07-Apr-21 18:32:23 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Powered-By: Express
+1 &lt; cf-request-id: 08b4b5ad9100004f8d53904000000001
+{"token":"QpwL5tke4Pnpja7X4"}</div>
+<div class="step-row">
+<div class="step-container" id="22">
+<div class="step-ref passed">22</div>
+<div class="step-cell passed">Then status 200</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="23">
+<div class="step-ref passed">23</div>
+<div class="step-cell passed">Then print response</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="preformatted" data-parent="23">20:32:23.457 [print] {
+  "token": "QpwL5tke4Pnpja7X4"
+}</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[4:31]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [4:31]</span><span class="scenario-name">post method for login </span>
+</div>
+<div class="scenario-time passed">ms: 1630</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[4:31]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[4:31]bg">
+<div class="step-container" id="24">
+<div class="step-ref bg-step">24</div>
+<div class="step-cell passed">* def users = read('jsonPayload.json')</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="preformatted" data-parent="24">20:32:23.488 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="step-row" data-parent="[4:31]bg">
+<div class="step-container" id="25">
+<div class="step-ref bg-step">25</div>
+<div class="step-cell passed">* url 'https://reqres.in/api'</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="26">
+<div class="step-ref passed">26</div>
+<div class="step-cell passed">Given path 'login'</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="27">
+<div class="step-ref passed">27</div>
+<div class="step-cell passed">And request users[3]</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="28">
+<div class="step-ref passed">28</div>
+<div class="step-cell passed">When method POST</div>
+</div>
+<div class="time-cell passed">1622</div>
+</div>
+<div class="preformatted" data-parent="28">20:32:23.499 request:
+1 &gt; POST https://reqres.in/api/login
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 24
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: reqres.in
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_281)
+{"email":"peter@klaven"}
+
+20:32:25.119 response time in milliseconds: 1618.40
+1 &lt; 400
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; CF-Cache-Status: DYNAMIC
+1 &lt; CF-RAY: 62ce2566dd564fc5-JNB
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 28
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Mon, 08 Mar 2021 18:32:25 GMT
+1 &lt; Etag: W/"1c-NmpazMScs9tOqR7eDEesn+pqC9Q"
+1 &lt; Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 &lt; NEL: {"max_age":604800,"report_to":"cf-nel"}
+1 &lt; Report-To: {"group":"cf-nel","endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=tRQfaZxujmKnoK5KcUiVIgJGOJ8rBp2iEMjIEINCp%2BkoK48LnwhKCFvLoyY2MsIAlaFW7VCRCiF0h4AgPe5gdgHEAahkieQiBjY%3D"}],"max_age":604800}
+1 &lt; Server: cloudflare
+1 &lt; Set-Cookie: __cfduid=d8f0cca2e7d328d7655c42ce9c9e5c0d91615228345; expires=Wed, 07-Apr-21 18:32:25 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Powered-By: Express
+1 &lt; cf-request-id: 08b4b5b44b00004fc53f3a5000000001
+{"error":"Missing password"}</div>
+<div class="step-row">
+<div class="step-container" id="29">
+<div class="step-ref passed">29</div>
+<div class="step-cell passed">Then status 400</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="30">
+<div class="step-ref passed">30</div>
+<div class="step-cell passed">Then print response</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="30">20:32:25.120 [print] {
+  "error": "Missing password"
+}</div>
+</div>
+</div>
+    
+</div>   
+  
+</body>
+
+</html>
